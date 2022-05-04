@@ -5,6 +5,9 @@
 #include "Subpath.h"
 
 namespace PDFPathCreationAPI {
+
+	CreatingPathState::~CreatingPathState() {}
+
 	void CreatingPathState::endPath() {
 		_stateManager->resetCurrentPathSubpathAndOptions();
 	}

@@ -14,6 +14,8 @@ namespace PDFPathCreationAPI {
 			CreationalState(stateManager) {
 		}
 
+		virtual ~CreatingRectangleState();
+
 		/* Path */
 		virtual void beginPath() final override { throw std::logic_error("Cannot begin path before ending current one."); }
 		virtual void endPath() final override { throw std::logic_error("Cannot end path while creating rectangle."); }

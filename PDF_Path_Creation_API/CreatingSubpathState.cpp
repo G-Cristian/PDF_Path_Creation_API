@@ -5,6 +5,8 @@
 #include "Subpath.h"
 
 namespace PDFPathCreationAPI {
+	CreatingSubpathState::~CreatingSubpathState() {}
+
 	void CreatingSubpathState::endSubpath(bool closeSubpath) {
 		if (_stateManager->_currentSubpath) {
 			_stateManager->_currentSubpath->setClosingSubpathCommand(_stateManager->getCloseSubpathCommandBasedOnOption(closeSubpath));

@@ -14,6 +14,8 @@ namespace PDFPathCreationAPI {
 			CreationalState(stateManager) {
 		}
 
+		virtual ~IdleState();
+
 		/* Path */
 		virtual void beginPath() final override;
 		virtual void endPath() final override { throw std::logic_error("Cannot end path before begining one."); }

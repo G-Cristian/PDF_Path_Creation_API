@@ -17,6 +17,8 @@ namespace PDFPathCreationAPI {
 		    _innerState(InnerState::FIRST_POINT){
 		}
 
+		virtual ~CreatingBezierCurve();
+
 		/* Path */
 		virtual void beginPath() final override { throw std::logic_error("Cannot begin path while creating bezier."); }
 		virtual void endPath() final override { throw std::logic_error("Cannot end path while creating bezier."); }

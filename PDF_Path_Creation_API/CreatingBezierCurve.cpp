@@ -6,6 +6,9 @@
 #include "Subpath.h"
 
 namespace PDFPathCreationAPI {
+
+	CreatingBezierCurve::~CreatingBezierCurve() {}
+
 	bool CreatingBezierCurve::appendCubicBezierCurvePoint(int x, int y) {
 		updateCurrentPoint(x, y);
 

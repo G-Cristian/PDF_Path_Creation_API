@@ -6,6 +6,8 @@
 #include "Subpath.h"
 
 namespace PDFPathCreationAPI {
+	CreatingRectangleState::~CreatingRectangleState() {}
+
 	void CreatingRectangleState::endRectangle() {
 		_stateManager->_currentSubpath = nullptr;
 	}
