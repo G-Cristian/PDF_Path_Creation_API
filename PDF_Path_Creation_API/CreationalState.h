@@ -10,7 +10,8 @@ namespace PDFPathCreationAPI {
 			_stateManager(stateManager) {
 		}
 
-		/* Path */
+		virtual ~CreationalState() = default;
+                /* Path */
 		virtual void beginPath() = 0;
 		virtual void endPath() = 0;
 
